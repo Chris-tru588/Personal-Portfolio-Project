@@ -1,0 +1,385 @@
+/* 
+    Chris Trujillo 
+    styles.css
+    12/08/24
+*/
+
+/* colors for website 
+    blue: #188FA7
+    charcol: #454851
+    silver: #C4BBB8
+
+*/
+
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.rounded {
+    border-radius: 50% 20% / 10% 40%;
+}
+
+h1 {
+    font-family: "Alumni Sans Pinstripe", sans-serif;
+}
+
+#desktop-nav {
+    display: none;
+}
+
+/* mobile header */
+header {
+    height: 100vh;
+    background-image: url(../Images/hero-image.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: solid 2px black;
+}
+
+.welcome-message {
+    padding: 4em;
+    color: white;
+}
+
+.welcome-message h1 {
+    font-size: 5em;
+    text-shadow: 5px 5px #558ABB;
+}
+
+/* mobile nav */
+#hamburger-nav {
+    margin: 1em 1.5em;
+}
+
+#hamburger-nav a.nav-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #b76d14;
+    padding: 1.5em;
+}
+
+.menu-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: #ffffff24;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+}
+
+.menu-links li:first-child {
+    padding: 0.5em 0 0 1em;
+}
+
+.menu-links li {
+    list-style-type: none;
+    width: 95%;
+    padding: 1.2em;
+    font-size: 1.5em;
+}
+
+.menu-links li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-links li:hover {
+    background-color: #fff;
+}
+
+/* Mobile main */
+.main-about {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    height: 108vh;
+    justify-content: center;
+}
+
+.profile-photo  {
+    height: 400px;
+    width: 400px;
+}
+
+.intro h2 {
+    font-size: 2em;
+    border-bottom: solid 1px black;
+    margin-bottom: 0.4em;
+}
+
+.intro {
+    text-align: center;
+    padding: 2em;
+    font-size: 1.3em;
+}
+
+/* experience page */
+
+.icon {
+    height: 40px;
+    width: 40px;
+}
+
+.front-end-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+article {
+    display: flex;
+    padding: 1em;
+    align-items: center;
+}
+
+.grid {
+    display: block;
+    grid-template-columns: auto auto;
+    gap: 5px;
+    border: solid 1px black;
+    border-radius: 30px;
+    padding: 1em;
+}
+
+.grid-header {
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+.experience-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact section */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    border-radius: 30px;
+    margin: 2em;
+    padding: 2em;
+}
+
+.contact {
+    display: flex;
+    margin: 2em;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.contact a {
+    text-decoration: underline;
+    font-size: 1em;
+    color: #000;
+}
+
+.contact-icon {
+    height: 50px;
+    width: 50px;
+}
+
+/* Button */
+.btn-container {
+    display: none;
+}
+
+/* Mobile Footer */
+footer {
+    text-align: center;
+    padding: 1.2em;
+    border-top: solid 1px black;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.footer-links img {
+    height: 40px;
+    width: 40px;
+}
+
+/* Desktop View */
+@media screen and (min-width: 1000px) {
+
+    /* Header */
+    header {
+        height: 92vh;
+        background-image: url(../Images/hero-image.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-bottom: solid 2px black;
+    }
+
+    .welcome-1 {
+        padding: 10em;
+        color: white;
+    }
+
+    .welcome h1 {
+        font-size: 8em;
+        text-shadow: 5px 5px #558ABB;
+    }
+
+    .welcome p {
+        font-size: 1.2em;
+    }
+
+    /* Desktop Navigation */ 
+    #desktop-nav {
+        display: block;
+        margin: 0.3em auto;
+    }
+
+    #hamburger-nav {
+        display: none;
+    }
+
+    .nav-links {
+        text-align: center;
+    }
+
+    .nav-links li {
+        display: inline-block;
+        margin-right: 2em;
+        list-style-type: none;
+        padding: 0.2em 2em;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.8em;
+    }
+
+    .nav-links li:hover {
+        background-color: darkgray;
+        border-radius: 10px;
+    }
+
+    /* Desktop main */
+
+    .main-about {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        height: 100vh;
+        padding: 0.5em 4em;
+        gap: 3em;
+    }
+
+    .intro {
+        word-wrap: break-word;
+    }
+
+    .profile-photo {
+        height: 400px;
+        width: 400px;
+    }
+
+    .main-about h2 {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+    }
+
+    .main-about p {
+        font-size: 1.5em;
+    }
+
+    /* experience section */
+    .front-end-container {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .grid {
+        display: grid;
+        padding: 3em;
+    }
+
+    /* contact section */
+    .contact-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .contact a {
+        text-decoration: none;
+        font-size: 1.8em;
+    }
+
+    .contact a:hover {
+        text-decoration: underline;
+        color: #6f6e6e;
+    }
+
+    /* button */
+    .btn-container {
+        display: block;
+        padding: 4em;
+    }
+
+    .btn {
+        position: absolute;
+        right: 10px;
+        padding: 1em;
+        background-color: #000;
+        color: #fff;
+        font-size: 0.9em;
+        border-radius: 10px;
+    }
+
+    .btn:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    /* Desktop Footer */
+    footer {
+        text-align: center;
+        padding: 1.2em;
+        border-top: solid 1px black;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1em;
+    }
+
+    .footer-links img {
+        height: 40px;
+        width: 40px;
+    }
+}
